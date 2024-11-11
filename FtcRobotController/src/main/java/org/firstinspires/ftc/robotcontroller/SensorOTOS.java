@@ -58,6 +58,7 @@ public class SensorOTOS extends LinearOpMode {
             // Inform user of available controls
             telemetry.addLine("Press Y (triangle) on Gamepad to reset tracking");
             telemetry.addLine("Press X (square) on Gamepad to calibrate the IMU");
+            telemetry.addLine("version 1.2");
             telemetry.addLine();
 
             // Log the position to the telemetry
@@ -80,7 +81,7 @@ public class SensorOTOS extends LinearOpMode {
         // persisted in the sensor, so you need to set at the start of all your
         // OpModes if using the non-default value.
         // myOtos.setLinearUnit(DistanceUnit.METER);
-        myOtos.setLinearUnit(DistanceUnit.INCH);
+        myOtos.setLinearUnit(DistanceUnit.METER);
         // myOtos.setAngularUnit(AnguleUnit.RADIANS);
         myOtos.setAngularUnit(AngleUnit.DEGREES);
 
@@ -117,7 +118,7 @@ public class SensorOTOS extends LinearOpMode {
         telemetry.addLine("linearScalar = 0.79312");
         telemetry.addLine("angularScalar = 0.9928");
         telemetry.update();
-        myOtos.setLinearScalar(0.793125243578388);
+        myOtos.setLinearScalar(10);
         myOtos.setAngularScalar(0.9928132455406966);
 
         // The IMU on the OTOS includes a gyroscope and accelerometer, which could
